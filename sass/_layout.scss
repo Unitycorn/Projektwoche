@@ -1,13 +1,19 @@
 @use 'globals' as *;
+@import '~react-image-gallery/styles/scss/image-gallery.scss';
 body {
-  background: $dark-purple;
-  color: white;
+  background: $black;
+  color: $white;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .site-wrapper {
-  /*   "Sticky Footer": Sorgt dafür, dass der Footer am unteren Bildschirmrand ist,
-        wenn es nicht genügend Inhalt gibt, um ihn nach unten zu drücken.
-        .page ist ein div um die gesamte Seite herum. */
   display: flex;
   // column ordnet die Inhalte der Seite normal von oben nach unten an
   flex-direction: column;
@@ -17,19 +23,193 @@ body {
 }
 
 .site-main {
-  /*   Teil des Sticky Footers: Sorgt dafür, dass der "mittlere" Bereich, also der Inhalt
-    anwächst, falls freier Platz zwischen Inhalt und Footer besteht.
-    Eigentlich würde auch flex: 1; genügen, aber der alte Internet Explorer
-    hat einen Bug... Ist heute zum Glück nicht mehr sehr relevant, aber bei
-    Problemen ist hier eine Übersicht zu Bugs und möglichen Lösungen zu finden:
-    https://github.com/philipwalton/flexbugs */
-  flex: 1 0 auto;
+  flex: 0 1 auto;
+  margin-bottom: 60px;
+  align-items: center;
 }
 
 .inner-width {
-  width: 100%;
-  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
   padding: 0 1rem;
+  align-items: center;
+}
+
+.video-responsive {
+  display: flex;
+  justify-content: center;
+}
+.vid-background {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  min-width: 99%;
+  max-width: 99%;
+}
+
+.cast_image_right {
+  position: fixed;
+  top: 25%;
+  right: 10em;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: $eod-blue;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  .inner-width {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  .logo_nc {
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url('https://services.staticwars.com/services/2bumpers/img/nc-logo.5c2f2589-svc.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 29px;
+    width: 60px;
+    margin: 0 1em;
+  }
+  .logo_anet {
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url('https://services.staticwars.com/services/2bumpers/img/anet-logo.68759482-svc.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 45px;
+    width: 113px;
+  }
+  .wave {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(/img/wave.png);
+    background-size: 1000px 100px;
+    &#wave1 {
+      --i: 1;
+      z-index: 1000;
+      opacity: 1;
+      bottom: 50;
+      animation: animateWave 4s linear infinite;
+    }
+    &#wave2 {
+      --i: 2;
+      z-index: 999;
+      opacity: 0.5;
+      bottom: 60px;
+      animation: animateWave_02 4s linear infinite;
+    }
+    &#wave3 {
+      --i: 3;
+      z-index: 1000;
+      opacity: 0.2;
+      bottom: 65px;
+      animation: animateWave 3s linear infinite;
+    }
+    &#wave4 {
+      --i: 4;
+      z-index: 999;
+      opacity: 0.7;
+      bottom: 70px;
+      animation: animateWave_02 3s linear infinite;
+    }
+  }
+}
+
+@keyframes animateWave {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animateWave_02 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+.profession_color {
+  &--nekromantin {
+    color: var(--eod-class-nekro);
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  position: relative;
+  float: left;
+  z-index: 998;
+  width: 280px;
+  height: 400px;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  h3 {
+    position: absolute;
+    top: 0;
+  }
+  ul {
+    position: relative;
+    left: -40px;
+    top: -45px;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 1em;
+    }
+  }
+  .content {
+    /* transform: translateY(100px);
+    transition: 0.5s;
+    opacity: 0; */
+
+    &:hover .content {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+}
+
+.image-gallery {
+  max-width: 70%;
+}
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:focus {
+  border: 4px solid $eod-blue;
+}
+
+.image-gallery-slide .image-gallery-description {
+  background: rgba(0, 0, 0, 0.7);
 }

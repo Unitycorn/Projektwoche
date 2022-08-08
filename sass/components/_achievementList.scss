@@ -1,0 +1,21 @@
+.dailies {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: 1px solid white;
+  align-items: center;
+  align-self: flex-start;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.daily_filters {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  margin: 2em 0;
+  select {
+    margin: 0 1em;
+  }
+}

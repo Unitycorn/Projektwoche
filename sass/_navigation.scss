@@ -1,5 +1,5 @@
 a {
-  color: var(--link-color);
+  color: var(--eod-link);
   transition: color 0.1s ease-out;
   &:hover,
   &:focus {
@@ -9,6 +9,9 @@ a {
 
 .site-navigation {
   padding: 1rem 0;
+  position: absolute;
+  top: 0;
+  background-color: black;
   a {
     font-size: 1.2rem;
     text-decoration: none;
@@ -17,5 +20,25 @@ a {
     &:not(:last-of-type) {
       margin-right: 1rem;
     }
+  }
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: -50px;
+    height: 53px;
+    width: 50px;
+    background: url('/img/corner-left.png');
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: -46px;
+    right: -62px;
+    height: 100px;
+    width: 62px;
+    background: url('/img/corner-right.png');
   }
 }

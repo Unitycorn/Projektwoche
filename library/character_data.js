@@ -1,0 +1,42 @@
+export default [
+  {
+    name: 'Mia Drachenfluch',
+    race: 'Mensch',
+    profession: 'Nekromantin',
+    specialization: 'Pestbringerin',
+    level: 80,
+    img: '/img/Mia_Drachenfluch.png',
+  },
+  {
+    name: 'Dwayna Nebelranke',
+    race: 'Sylvari',
+    profession: 'Waldläuferin',
+    specialization: 'Seelenwandlerin',
+    img: '/img/Dwayna Nebelranke.png',
+    level: '80',
+  },
+  {
+    name: 'Cataleya De Fleur',
+    race: 'Mensch',
+    profession: 'Mesmer',
+    specialization: 'Virtuosin',
+    level: '80',
+    img: '/img/Cataleya_De_Fleur.png',
+  },
+  {
+    name: 'Lucia Schneeklaue',
+    race: 'Charr',
+    profession: 'Kriegerin',
+    specialization: 'Berserkerin',
+    img: '/img/Lucia_Schneeklaue.png',
+    level: '80',
+  },
+  {
+    name: 'Callistra Maythorn',
+    race: 'Norn',
+    profession: 'Wiedergängerin',
+    specialization: 'Abtrünnige',
+    img: '/img/Callistra_Maythorn.png',
+    level: '80',
+  },
+];

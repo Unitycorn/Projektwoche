@@ -6,20 +6,20 @@ export default function Navigation() {
       <Link href="/">
         <a>Start</a>
       </Link>
-      <Link href="/blog">
-        <a>Blog</a>
-      </Link>
-      <Link href="/news">
-        <a>News</a>
-      </Link>
-      <Link href="/bilder">
-        <a>Bilder</a>
+      <Link href="/characters">
+        <a>Character Viewer</a>
       </Link>
       <Link href="/achievements">
-        <a>WiP</a>
+        <a>Dalíly Acievement Checker</a>
       </Link>
-      <Link href="/characters">
-        <a>WiP 2</a>
+      <Link href="/cantha">
+        <a>The Beauty of Cantha</a>
+      </Link>
+      <Link
+        href="https://wiki-en.guildwars2.com/wiki/Main_Page"
+        target="_blank"
+      >
+        <a>Wiki</a>
       </Link>
     </nav>
   );

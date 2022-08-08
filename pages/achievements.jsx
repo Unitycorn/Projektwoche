@@ -1,6 +1,6 @@
 import AchievementFilter from '@/components/AchievementFilter';
 import AchievementList from '@/components/AchievementList';
-import { Layout } from '@/components/Layout';
+import Layout from '@/components/Layout';
 import { Fragment, useState } from 'react';
 
 const apiKey = process.env.GW2_API_KEY;
@@ -37,7 +37,12 @@ export default function Achievements({ dailies }) {
   const [maxLvl, setMaxLvl] = useState(1);
   const [fractalTier, setFractalTier] = useState('');
   return (
-    <>
+    <Layout title="Die heutigen Daily-Achievements:">
+      <p>
+        Dailies sind kleine tägliche Aufgaben, deren Erledigung dir verschiedene
+        Belohnungen, so wie 2 Gold für die Erledigung von drei beliebigen
+        Aufgaben einbringt.
+      </p>
       <AchievementFilter
         dailies={dailies}
         setContent={setContent}
@@ -51,7 +56,7 @@ export default function Achievements({ dailies }) {
         fractalTier={fractalTier}
         maxLvlOnly={maxLvl}
       />
-    </>
+    </Layout>
   );
 }
 

@@ -1,5 +1,10 @@
-import GatherCharacterData from '@/components/GatherCharacterData';
+import CharacterViewer from '@/components/CharacterViewer';
+import Layout from '@/components/Layout';
 
 export default function characters() {
-  return <GatherCharacterData />;
+  return (
+    <Layout title="Meine Charaktere">
+      <CharacterViewer />
+    </Layout>
+  );
 }

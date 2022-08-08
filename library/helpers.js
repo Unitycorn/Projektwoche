@@ -46,3 +46,7 @@ export function getDistance(lat1, lon1, lat2, lon2, unit = 'K') {
   }
   return dist;
 }
+
+export function getRandomItem(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}

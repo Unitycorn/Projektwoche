@@ -9,8 +9,8 @@ export default function AchievementFilter({
 }) {
   const contentTypes = Object.keys(dailies);
   return (
-    <>
-      <label htmlFor="contentType" />
+    <section className="daily_filters">
+      <label htmlFor="contentType">Wähle eine Kategorie:</label>
       <select
         id="contentType"
         name="contentType"
@@ -25,7 +25,7 @@ export default function AchievementFilter({
       </select>
       {content == 'fractals' ? (
         <>
-          <label htmlFor="fractalTier" />
+          <label htmlFor="fractalTier">Wähle eine Schwierigkeitsstufe:</label>
           <select
             id="farctalTier"
             name="fractalTier"
@@ -41,12 +41,12 @@ export default function AchievementFilter({
       ) : (
         ''
       )}
-      <label htmlFor="onlyMaxLvl">Nur Level 80 Charaktere</label>
+      {/*  <label htmlFor="onlyMaxLvl">Nur Level 80 Charaktere</label>
       <input
         type="checkbox"
         id="onlyMaxLvl"
         onChange={(e) => e.useToggle(setOnlyMaxLvl)}
-      />
-    </>
+      /> */}
+    </section>
   );
 }
