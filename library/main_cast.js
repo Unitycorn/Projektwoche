@@ -7,4 +7,5 @@ export default [
   { image: '/img/jade_golem.png', name: 'Jade Golem' },
   { image: '/img/minister_li.png', name: 'Minister Li' },
   { image: '/img/jade_wegmarke.png', name: 'Jade Wegmarke' },
+  { image: '/img/zhou_yao.png', name: 'Zhou Yao' },
 ];

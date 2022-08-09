@@ -1,63 +1,35 @@
 import * as character_data from '../library/character_data';
-import Character from '@/components/Character';
 import Image from 'next/future/image';
-import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export default function CharacterViewer() {
+  const router = useRouter();
   return (
-    <>
-      <BrowserRouter>
-        <section className="cards">
-          {character_data.default.map((character) => {
-            <Routes>
-              <Route
-                path={'/character/:id'}
-                element={<Character character={character} />}
-              />
-            </Routes>;
-            return (
-              <div
-                key={character.name}
-                className="character_view_animation card"
-              >
-                {character.img ? (
-                  <Image
-                    src={character.img}
-                    width="200"
-                    height="900"
-                    alt={character.name}
-                  />
-                ) : (
-                  ''
-                )}
-                <h3>
-                  <Link to={`/character/${character.name}`}>
-                    {character.name}
-                  </Link>
-                </h3>
-                <ul className="slide-in-right">
-                  <li>
-                    <b>Level: </b>
-                    {character.level}
-                  </li>
-                  <li>
-                    <b>Volk: </b>
-                    {character.race}
-                  </li>
-                  <li>
-                    <b>Klasse: </b>
-                    {character.profession}
-                  </li>
-                  <li>
-                    <b>Spezialisierung: </b>
-                    {character.specialization}
-                  </li>
-                </ul>
-              </div>
-            );
-          })}
-        </section>
-      </BrowserRouter>
-    </>
+    <section className="cards">
+      {character_data.default.map((character) => {
+        return (
+          <div key={character.name} className="character_view card">
+            <button
+              type="button"
+              aria-label="Zeige Chrakterdetails"
+              onClick={() => router.push(`/character/${character.name}`)}
+            >
+              <span>{character.name}</span>
+              {character.img ? (
+                <Image
+                  src={character.img}
+                  width="200"
+                  height="900"
+                  alt={character.name}
+                />
+              ) : (
+                ''
+              )}
+            </button>
+          </div>
+        );
+      })}
+    </section>
   );
 }

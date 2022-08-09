@@ -4,7 +4,44 @@ import ImageGallery from 'react-image-gallery';
 export default function chantha() {
   return (
     <Layout title="The beauty of Cantha">
+      <p>
+        In Guild Wars 2: End of Dragons bereist ihr den seit Jahrhunderten
+        isolieren Kontinent Cantha. Begebt euch auf die Suche nach dem letzten
+        verbleibenden Alt-Drachen und entdeckt was dieser einzigartige Kontinent
+        zu bieten hat.
+        <br />
+        <br />
+        Bereist blühende Landschaften, eine aufstrebende Stadt angetrieben von
+        Jade-Technologie, den versteinerten Wald der langsam wieder zum Leben
+        erwacht und das Jademeer, Schauplatz eurer wohl größten herausforderung!
+      </p>
       <ImageGallery items={images} />
+      <h3>Die Provinz Seitung</h3>
+      <p>
+        Eine malerische Insellandschaft mit Fischerdörfern und
+        Tempellandschaften. Sitz der kaiserin und Heimat des wohl größten Genies
+        südlich des Endlosen Ozeans.
+      </p>
+      <h3>Stadt Neu-Kaeineng</h3>
+      <p>
+        Vor hunderten von jahren wurde die Stadt Kaeineng durch das Erwachen des
+        Alt-Drachen Zhaitan geflutet. Auf den Ruinen wurde die Stadt
+        Neu-Kaeineng gebaut und gilt als die technologisch am weitesten
+        entwickelte Metropole weltweit.
+      </p>
+      <h3>Die Echovald Wildnis</h3>
+      <p>
+        Der durch den Jadewind-Vorfall (GuildWars: Factions) versteinerte Wald
+        erwacht nach und nach wieder zum Leben. Er ist heute der Schauplatz des
+        Bandenkrieges zwischen der Jadebruderschaft und den so genannten
+        Sprechern.
+      </p>
+      <h3>Das Jademeer</h3>
+      <p>
+        Dieses Meer war vor ewigkeiten tatsächlich ein Meer! Nun besteht es aus
+        purer Jade, die zur Energieerzeugung abgebaut und verarbeitet wird.
+        Steckt vielleicht mehr darin als es sich vermuten lässt?
+      </p>
     </Layout>
   );
 }

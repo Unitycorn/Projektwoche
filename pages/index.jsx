@@ -31,17 +31,21 @@ export default function Home() {
       <YoutubeEmbed embedId="LYzrKJ1IkEw" />
       <ul>
         <li>Keine Monatlichen Kosten ✔</li>
+        <li>Basisspiel: Free-To-Play ✔</li>
+        <li>Erweiterungen: Ein mal kaufen, für immer spielen ✔</li>
         <li>Kein Verfall deiner Ausrüstungswerte ✔</li>
         <li>Keine Grind-Spirale ✔</li>
         <li>Kein Pay to Win, nur QoL und Visuals ✔</li>
         <li>Ultracoole Reittiere ✔</li>
       </ul>
+
       <a
+        className="button_play_now"
         href="https://account.arena.net/welcome"
         rel="noreferrer"
         target="_blank"
       >
-        <h3>👉 Jetzt kostenlos Loslegen! 👈</h3>
+        Jetzt kostenlos loslegen!
       </a>
     </Layout>
   );

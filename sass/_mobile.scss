@@ -1,0 +1,30 @@
+@media only screen and (max-width: 600px) {
+  body {
+    background: transparent url('/img/background_mobile.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-width: 100%;
+  }
+  .cast_image_right {
+    display: none;
+  }
+  video {
+    display: none;
+  }
+
+  .inner-width {
+    width: 100%;
+  }
+
+  footer .wave {
+    bottom: 59px;
+  }
+
+  .image-gallery {
+    max-width: 100%;
+  }
+
+  footer .logo_nc {
+    height: 36px;
+  }
+}

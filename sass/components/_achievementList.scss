@@ -7,6 +7,10 @@
   align-self: flex-start;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.1);
+  &:hover {
+    background: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+  }
 }
 
 .daily_filters {

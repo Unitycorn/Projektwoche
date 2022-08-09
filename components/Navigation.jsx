@@ -7,19 +7,13 @@ export default function Navigation() {
         <a>Start</a>
       </Link>
       <Link href="/characters">
-        <a>Character Viewer</a>
+        <a>Charakter Viewer</a>
       </Link>
       <Link href="/achievements">
-        <a>Dalíly Acievement Checker</a>
+        <a>Dalily Achievements</a>
       </Link>
       <Link href="/cantha">
-        <a>The Beauty of Cantha</a>
-      </Link>
-      <Link
-        href="https://wiki-en.guildwars2.com/wiki/Main_Page"
-        target="_blank"
-      >
-        <a>Wiki</a>
+        <a>Cantha Entdecken</a>
       </Link>
     </nav>
   );

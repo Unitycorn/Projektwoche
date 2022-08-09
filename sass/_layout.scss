@@ -24,7 +24,7 @@ ul {
 
 .site-main {
   flex: 0 1 auto;
-  margin-bottom: 60px;
+  margin-bottom: 200px;
   align-items: center;
 }
 
@@ -38,7 +38,7 @@ ul {
   align-items: center;
 }
 
-.video-responsive {
+.embedded_video {
   display: flex;
   justify-content: center;
 }
@@ -48,12 +48,6 @@ ul {
   z-index: -1;
   min-width: 99%;
   max-width: 99%;
-}
-
-.cast_image_right {
-  position: fixed;
-  top: 25%;
-  right: 10em;
 }
 
 footer {
@@ -129,79 +123,6 @@ footer {
   }
 }
 
-@keyframes animateWave {
-  0% {
-    background-position-x: 1000px;
-  }
-  100% {
-    background-position-x: 0px;
-  }
-}
-
-@keyframes animateWave_02 {
-  0% {
-    background-position-x: 0px;
-  }
-  100% {
-    background-position-x: 1000px;
-  }
-}
-
-.profession_color {
-  &--nekromantin {
-    color: var(--eod-class-nekro);
-  }
-}
-
-.cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.card {
-  position: relative;
-  float: left;
-  z-index: 998;
-  width: 280px;
-  height: 400px;
-  margin: 30px;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
-  h3 {
-    position: absolute;
-    top: 0;
-  }
-  ul {
-    position: relative;
-    left: -40px;
-    top: -45px;
-    margin: 0;
-    padding: 0;
-
-    li {
-      margin-bottom: 1em;
-    }
-  }
-  .content {
-    /* transform: translateY(100px);
-    transition: 0.5s;
-    opacity: 0; */
-
-    &:hover .content {
-      transform: translateY(0px);
-      opacity: 1;
-    }
-  }
-}
-
 .image-gallery {
   max-width: 70%;
 }
@@ -212,4 +133,20 @@ footer {
 
 .image-gallery-slide .image-gallery-description {
   background: rgba(0, 0, 0, 0.7);
+}
+
+.button_play_now {
+  background: url(https://cdn.ncwest.com/gw2/eod/DD2ooTbg6xziiB5KyO8S/b042c6fd-08bd-4217-8fe4-559cded0fb70/images/btn-preorder.png);
+  display: block;
+  height: 58px;
+  width: 264px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: #000;
+  margin-top: 30px;
+  &:hover,
+  &:active {
+    color: #fff;
+  }
 }

@@ -10,7 +10,7 @@ export default function AchievementList({
     return dailies[content].map((e) => {
       if (
         !e.title.includes(fractalTier.toString()) ||
-        (content == 'pve' && e.level.min != 80)
+        (content == 'pve' && e.level.min <= 1)
       ) {
         return;
       }

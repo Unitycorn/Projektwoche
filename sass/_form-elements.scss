@@ -3,22 +3,16 @@ button {
   padding: 0.5em;
   border-radius: 0.5em;
   font-size: 1.2rem;
-  background: orange;
+  background: var(--eod-blue);
   color: $black;
   border: none;
   box-shadow: none;
   font-weight: bold;
+  cursor: pointer;
   &[disabled] {
     background: $text;
   }
-}
-
-.autosuggest {
-  input {
-    background: $white;
-    color: $dark-purple;
-    &::placeholder {
-      color: $black;
-    }
+  &:hover {
+    background: #fff;
   }
 }

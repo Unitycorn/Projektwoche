@@ -16,7 +16,6 @@ export default function AchievementFilter({
         name="contentType"
         onChange={(e) => setContent(e.currentTarget.value)}
       >
-        <option value="pve">Bitte wählen:</option>
         {contentTypes.map((e) => (
           <option key={e} value={e}>
             {e}
@@ -39,7 +38,7 @@ export default function AchievementFilter({
           </select>
         </>
       ) : (
-        ''
+        setFractalTier('')
       )}
       {/*  <label htmlFor="onlyMaxLvl">Nur Level 80 Charaktere</label>
       <input

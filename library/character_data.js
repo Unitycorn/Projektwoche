@@ -14,6 +14,12 @@ export default [
     specialization: 'Seelenwandlerin',
     img: '/img/Dwayna Nebelranke.png',
     level: '80',
+    gear: 'Mittlere Rüstung',
+    wears: 'Eine Mischung aus Kultur-Rüstung und Event-Skins',
+    weapons: 'Langbogen / Axt & Axt',
+    catchphrase: '"Alles hat ein recht zu wachsen!" ',
+    description:
+      'Als Waldläuferin ist Dwayna mit ihrem Langbogen unterwegs. Zusätzlich trägt sie zwei Äxte für den Nahkampf mit sich. Als Gesandte des Blassen Baumes ist es ihre Aufgabe Tyria von der Bürde der Alt-Drachen zu befreien',
   },
   {
     name: 'Cataleya De Fleur',
