@@ -1,7 +1,6 @@
 import * as character_data from '../library/character_data';
 import Image from 'next/future/image';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 
 export default function CharacterViewer() {
   const router = useRouter();

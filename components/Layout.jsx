@@ -1,6 +1,5 @@
 import Image from 'next/future/image';
 import Head from 'next/head';
-import CharacterViewer from './CharacterViewer';
 import Footer from './Footer';
 import Header from './Header';
 import MainCastViewer from './MainCastViewer';

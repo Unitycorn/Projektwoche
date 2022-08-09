@@ -1,14 +1,10 @@
-export default function AchievementList({
-  dailies,
-  content,
-  onlyMaxLvl,
-  fractalTier,
-}) {
+export default function AchievementList({ dailies, content, fractalTier }) {
   const cssClass = `dailies daily_${content}`;
 
   if (dailies[content].length) {
     return dailies[content].map((e) => {
       if (
+        /*Early return wenn der Titel nicht "Rang X" beinhaltet*/
         !e.title.includes(fractalTier.toString()) ||
         (content == 'pve' && e.level.min <= 1)
       ) {
