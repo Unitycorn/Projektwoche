@@ -1,3 +1,5 @@
+/*TODO: Navigation für mobile Endgeräte optimieren (Burger-Menu) */
+
 import Link from 'next/link';
 
 export default function Navigation() {

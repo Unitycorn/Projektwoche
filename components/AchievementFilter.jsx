@@ -1,10 +1,7 @@
-import { useToggle } from '@/hooks/useToggle';
-
 export default function AchievementFilter({
   dailies,
   content,
   setContent,
-  setOnlyMaxLvl,
   setFractalTier,
 }) {
   const contentTypes = Object.keys(dailies);
@@ -38,14 +35,10 @@ export default function AchievementFilter({
           </select>
         </>
       ) : (
+        /* Wichtig: Den Schwierigkeitsfilter (wieder) zurücksetzen wenn vom Content Fraktale wieder 
+        in einen anderen Content gewechselt wird, da ansonsten nichts mehr ausgegeben wird, weil nach "Rang x" gesucht wird*/
         setFractalTier('')
       )}
-      {/*  <label htmlFor="onlyMaxLvl">Nur Level 80 Charaktere</label>
-      <input
-        type="checkbox"
-        id="onlyMaxLvl"
-        onChange={(e) => e.useToggle(setOnlyMaxLvl)}
-      /> */}
     </section>
   );
 }

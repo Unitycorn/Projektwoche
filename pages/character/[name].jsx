@@ -36,8 +36,7 @@ export default function Character({ character }) {
     );
   }
   return (
-    <Layout>
-      <h1>{character[0].name}</h1>
+    <Layout title={character[0].name}>
       <section className="character_details">
         <div className="overview_left">
           <Image

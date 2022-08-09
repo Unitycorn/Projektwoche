@@ -1,10 +1,10 @@
 import AchievementFilter from '@/components/AchievementFilter';
 import AchievementList from '@/components/AchievementList';
 import Layout from '@/components/Layout';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 
-const apiKey = process.env.GW2_API_KEY;
-const apiURL = process.env.GW2_API_URL;
+//const apiURL = process.env.GW2_API_URL;
+const apiURL = 'https://api.guildwars2.com/v2/';
 
 let dailies = [];
 let achievements = [];
@@ -34,8 +34,8 @@ export async function getStaticProps() {
 
 export default function Achievements({ dailies }) {
   const [content, setContent] = useState('pve');
-  const [maxLvl, setMaxLvl] = useState(1);
   const [fractalTier, setFractalTier] = useState('');
+
   return (
     <Layout title="Die heutigen Daily-Achievements:">
       <p>
@@ -47,14 +47,12 @@ export default function Achievements({ dailies }) {
         dailies={dailies}
         setContent={setContent}
         content={content}
-        setOnlyMaxLvl={setMaxLvl}
         setFractalTier={setFractalTier}
       />
       <AchievementList
         dailies={dailies}
         content={content}
         fractalTier={fractalTier}
-        maxLvlOnly={maxLvl}
       />
     </Layout>
   );

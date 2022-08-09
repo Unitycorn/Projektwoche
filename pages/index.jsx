@@ -1,4 +1,3 @@
-import ShuffleText from '@/components/ShuffleText';
 import YoutubeEmbed from '@/components/YoutubeEmbed';
 import Layout from '../components/Layout';
 
