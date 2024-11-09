@@ -9,7 +9,7 @@ export default function characters() {
         Kommandeur der Drachenwacht!
         <br />
         Entscheide dich für einen Helden aus 5 verschiedenen Völkern und
-        gestalte ihn ganz nach deinen wünschen.Dir stehen zahlreiche
+        gestalte ihn ganz nach deinen wünschen. Dir stehen zahlreiche
         Möglichkeiten für Gesicht, Haar und Körperbau zur verfügung. Im Verlauf
         des Spiels häufst du eine riesige Sammlung an Skins und Farben an, mit
         denen du deinen Style beliebig anpassen und wieder verändern kannst!

@@ -3,7 +3,7 @@ import ImageGallery from 'react-image-gallery';
 
 export default function chantha() {
   return (
-    <Layout title="The beauty of Cantha">
+    <Layout title="The real beauty of Cantha">
       <p>
         In Guild Wars 2: End of Dragons bereist ihr den seit Jahrhunderten
         isolieren Kontinent Cantha. Begebt euch auf die Suche nach dem letzten

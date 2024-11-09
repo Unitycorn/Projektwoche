@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
+const ContentSecurityPolicy = `
+  default-src 'self';
+  script-src 'self';
+  style-src 'self';
+  font-src 'self';  
+`;
 const nextConfig = {
   reactStrictMode: false,
   images: {
@@ -14,6 +20,24 @@ const nextConfig = {
     images: {
       allowFutureImage: true,
     },
+  },
+  async headers() {
+    return [
+      {
+        // Apply these headers to all routes in your application.
+        source: '/:path*',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+          /*           {
+            key: 'Content-Security-Policy',
+            value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim(),
+          }, */
+        ],
+      },
+    ];
   },
 };
 
