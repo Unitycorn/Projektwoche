@@ -36,7 +36,7 @@ export default function AchievementList({ dailies, content, fractalTier }) {
     return (
       <div>
         <h3>Keine Dailies gefunden!</h3>
-        <h2>Update 11/2024:</h2>
+        <h2>Update 11/2024: </h2>
         <p>
           Aufgrund eines Systemwechsels wurden die Daily-Achievements 2023 aus
           dem Spiel entfernt und gegen ein neues System ersetzt.
